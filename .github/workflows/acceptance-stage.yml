@@ -1,4 +1,4 @@
-name: Production Stage
+name: Acceptance Stage Deploy
 
 on:
   repository_dispatch:

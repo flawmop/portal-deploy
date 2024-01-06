@@ -1,4 +1,4 @@
-name: Production Stage
+name: Commit Stage Deploy
 
 on:
   repository_dispatch:
