@@ -1,0 +1,2 @@
+portal:
+  greeting: from portal-deployment/kubernetes/applications/welcome-svc/dev/application.yml
