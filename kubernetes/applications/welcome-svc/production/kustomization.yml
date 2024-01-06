@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/flawmop/welcome-svc/k8s?ref=5308cd735d7d31716358b1968551b5463d4150aa
+- github.com/flawmop/welcome-svc/k8s?ref=ebe21620ed71b6b6ceadfcfcb7eed7b3e991e1fe
 
 patches:
 - path: ./patch-env.yml
@@ -10,7 +10,7 @@ patches:
 images:
 - name: welcome-svc
   newName: ghcr.io/flawmop/welcome-svc
-  newTag: 5308cd735d7d31716358b1968551b5463d4150aa
+  newTag: ebe21620ed71b6b6ceadfcfcb7eed7b3e991e1fe
 
 replicas:
 - count: 1
