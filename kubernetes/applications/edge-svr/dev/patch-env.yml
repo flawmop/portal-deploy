@@ -7,3 +7,6 @@ spec:
     spec:
       containers:
         - name: edge-svr
+          env:
+            - name: KEYCLOAK_URI
+              value: https://keycloak.dev.insilicosoft.com/realms/Portal
