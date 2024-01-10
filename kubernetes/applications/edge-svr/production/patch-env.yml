@@ -10,3 +10,5 @@ spec:
           env:
             - name: KEYCLOAK_ISSUER_URI
               value: http://keycloak.production.insilicosoft.com/realms/Portal
+            - name: JAVA_TOOL_OPTIONS
+              value: -Dlogging.level.root=INFO
