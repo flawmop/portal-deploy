@@ -10,7 +10,7 @@ patches:
 configMapGenerator:
 - behavior: merge
   files:
-  - application-production.yml
+  - application.yml
   name: welcome-config
 
 images:
