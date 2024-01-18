@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/flawmop/edge-svr/k8s?ref=bae3014b1ff06d3d570b2e6d384147bbaff79246
+- github.com/flawmop/edge-svr/k8s?ref=eae747f444dbc5afb92b1263467f2b7da9eb944a
 
 patches:
 - path: ./patch-env.yml
@@ -10,7 +10,7 @@ patches:
 images:
 - name: edge-svr
   newName: ghcr.io/flawmop/edge-svr
-  newTag: bae3014b1ff06d3d570b2e6d384147bbaff79246
+  newTag: eae747f444dbc5afb92b1263467f2b7da9eb944a
 
 replicas:
 - count: 1
