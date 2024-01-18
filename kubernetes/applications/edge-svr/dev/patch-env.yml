@@ -11,7 +11,7 @@ spec:
             - name: KEYCLOAK_ISSUER_URI
               value: https://keycloak.dev.insilicosoft.com/realms/Portal
             - name: JAVA_TOOL_OPTIONS
-              value: "-Dlogging.level.root=DEBUG -Djavax.net.ssl.trustStore=/etc/secrets/keystore.jks -Djavax.net.ssl.trustStorePassword=changeit"
+              value: "-Dlogging.level.root=DEBUG -Djavax.net.ssl.trustStore=/etc/secrets/truststore.jks -Djavax.net.ssl.trustStorePassword=changeit"
           volumeMounts:
             - name: self-signed-certs-volume
               mountPath: /etc/secrets/
@@ -19,8 +19,8 @@ spec:
       volumes:
         - name: self-signed-certs-volume
           secret:
-            secretName: self-signed-jks
+            secretName: self-signed-truststore-jks
             items:
-              - key: keystore.jks
-                path: keystore.jks
+              - key: truststore.jks
+                path: truststore.jks
 
