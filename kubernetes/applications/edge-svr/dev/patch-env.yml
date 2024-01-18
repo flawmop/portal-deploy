@@ -8,8 +8,10 @@ spec:
       containers:
         - name: edge-svr
           env:
+            - name: ROUTE_KEYCLOAK
+              value: http://portal-keycloak/realms/Portal
             - name: KEYCLOAK_ISSUER_URI
-              value: https://dev.insilicosoft.com/auth/realms/Portal
+              value: https://dev.insilicosoft.com/realms/Portal
             - name: JAVA_TOOL_OPTIONS
               value: "-Dlogging.level.root=DEBUG -Djavax.net.ssl.trustStore=/etc/secrets/keystore.jks -Djavax.net.ssl.trustStorePassword=changeit"
           volumeMounts:
