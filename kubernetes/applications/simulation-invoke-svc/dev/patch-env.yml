@@ -1,0 +1,12 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simulation-invoke-svc
+spec:
+  template:
+    spec:
+      containers:
+        - name: simulation-invoke-svc
+          env:
+            - name: JAVA_TOOL_OPTIONS
+              value: "-Dlogging.level.root=DEBUG"
