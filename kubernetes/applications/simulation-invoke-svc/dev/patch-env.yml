@@ -12,3 +12,13 @@ spec:
               value: "-Dlogging.level.root=DEBUG"
             - name: SPRING_RABBITMQ_HOST
               value: portal-rabbitmq
+            - name: SPRING_RABBITMQ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-secret
+                  key: rabbitmqpassword
+            - name: SPRING_RABBITMQ_USER
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-secret
+                  key: rabbitmquser
