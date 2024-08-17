@@ -10,7 +10,7 @@ spec:
       - name: run-input-processing-svc
         env:
         - name: COM_INSILICOSOFT_EXECUTOR_COREPOOLSIZE
-          value: "10"
+          value: 10
 #        - name: COM_INSILICOSOFT_EXECUTOR_MAXPOOLSIZE
 #          value: 10
 #        - name: COM_INSILICOSOFT_EXECUTOR_QUEUECAPACITY
