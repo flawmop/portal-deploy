@@ -10,13 +10,13 @@ spec:
       - name: run-input-processing-svc
         env:
         - name: COM_INSILICOSOFT_EXECUTOR_COREPOOLSIZE
-          value: "10"
+          value: '10'
         - name: COM_INSILICOSOFT_EXECUTOR_MAXPOOLSIZE
-          value: "10"
+          value: '10'
         - name: COM_INSILICOSOFT_EXECUTOR_QUEUECAPACITY
-          value: "500"
+          value: '500'
         - name: COM_INSILICOSOFT_EXECUTOR_THREADNAMEPREFIX
-          value: "~Async-prod-"
+          value: ~Async-prod-
         - name: LOGGING_LEVEL_ROOT
           value: DEBUG
         - name: SPRING_RABBITMQ_HOST
