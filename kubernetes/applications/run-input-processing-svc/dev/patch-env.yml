@@ -15,7 +15,7 @@ spec:
             - name: COM_INSILICOSOFT_EXECUTOR_QUEUECAPACITY
               value: 250
             - name: COM_INSILICOSOFT_EXECUTOR_THREADNAMEPREFIX
-              value: ~Async-dev-
+              value: '~Async-dev-'
             - name: SPRING_RABBITMQ_HOST
               value: portal-rabbitmq
             - name: SPRING_RABBITMQ_PASSWORD
