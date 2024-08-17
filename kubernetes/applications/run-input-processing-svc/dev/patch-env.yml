@@ -6,26 +6,26 @@ spec:
   template:
     spec:
       containers:
-        - name: run-input-processing-svc
-          env:
-            - name: COM_INSILICOSOFT_EXECUTOR_COREPOOLSIZE
-              value: 5
-            - name: COM_INSILICOSOFT_EXECUTOR_MAXPOOLSIZE
-              value: 5
-            - name: COM_INSILICOSOFT_EXECUTOR_QUEUECAPACITY
-              value: 250
-            - name: COM_INSILICOSOFT_EXECUTOR_THREADNAMEPREFIX
-              value: '~Async-dev-'
-            - name: SPRING_RABBITMQ_HOST
-              value: portal-rabbitmq
-            - name: SPRING_RABBITMQ_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  name: rabbitmq-secret
-                  key: rabbitmqpassword
-            - name: SPRING_RABBITMQ_USER
-              valueFrom:
-                secretKeyRef:
-                  name: rabbitmq-secret
-                  key: rabbitmquser
+      - name: run-input-processing-svc
+        env:
+        - name: COM_INSILICOSOFT_EXECUTOR_COREPOOLSIZE
+          value: '5'
+        - name: COM_INSILICOSOFT_EXECUTOR_MAXPOOLSIZE
+          value: '5'
+        - name: COM_INSILICOSOFT_EXECUTOR_QUEUECAPACITY
+          value: '250'
+        - name: COM_INSILICOSOFT_EXECUTOR_THREADNAMEPREFIX
+          value: ~Async-dev-
+        - name: SPRING_RABBITMQ_HOST
+          value: portal-rabbitmq
+        - name: SPRING_RABBITMQ_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-secret
+              key: rabbitmqpassword
+        - name: SPRING_RABBITMQ_USER
+          valueFrom:
+            secretKeyRef:
+              name: rabbitmq-secret
+              key: rabbitmquser
 
