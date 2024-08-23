@@ -18,7 +18,7 @@ spec:
         - name: COM_INSILICOSOFT_EXECUTOR_THREADNAMEPREFIX
           value: ~Async-prod-
         - name: LOGGING_LEVEL_ROOT
-          value: WARN
+          value: TRACE
         - name: SPRING_RABBITMQ_HOST
           value: portal-rabbitmq
         - name: SPRING_RABBITMQ_PASSWORD
