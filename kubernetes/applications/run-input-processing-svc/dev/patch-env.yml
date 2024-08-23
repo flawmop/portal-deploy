@@ -28,4 +28,5 @@ spec:
             secretKeyRef:
               name: rabbitmq-secret
               key: rabbitmquser
-
+        - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI
+          value: http://portal-keycloak:8080/realms/Portal
