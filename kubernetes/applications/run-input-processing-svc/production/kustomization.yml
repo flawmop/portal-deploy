@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/flawmop/run-input-processing-svc/k8s?ref=e7ee5b66e8c6e169793b95113951c69d43f31b4c
+- github.com/flawmop/run-input-processing-svc/k8s?ref=dc5869ad5277c7ff849ecc0925f16acff1a72c9e
 
 patches:
 - path: ./patch-env.yml
@@ -16,7 +16,7 @@ configMapGenerator:
 images:
 - name: run-input-processing-svc
   newName: ghcr.io/flawmop/run-input-processing-svc
-  newTag: e7ee5b66e8c6e169793b95113951c69d43f31b4c
+  newTag: dc5869ad5277c7ff849ecc0925f16acff1a72c9e
 
 replicas:
 - count: 1
