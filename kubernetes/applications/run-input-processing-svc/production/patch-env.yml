@@ -19,6 +19,8 @@ spec:
           value: ~Async-prod-
         - name: LOGGING_LEVEL_ROOT
           value: TRACE
+        - name: SPRING_DATASOURCE_URL
+          value: jdbc:postgresql://portal-postgres:5432/portaldb
         - name: SPRING_RABBITMQ_HOST
           value: portal-rabbitmq
         - name: SPRING_RABBITMQ_PASSWORD
