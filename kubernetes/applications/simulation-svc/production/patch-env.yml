@@ -16,7 +16,7 @@ spec:
         - name: COM_INSILICOSOFT_EXECUTOR_QUEUECAPACITY
           value: '500'
         - name: COM_INSILICOSOFT_EXECUTOR_THREADNAMEPREFIX
-          value: ~Async-prod-
+          value: ~simsvc-prod-
         - name: LOGGING_LEVEL_ROOT
           value: TRACE
         - name: SPRING_DATASOURCE_URL
