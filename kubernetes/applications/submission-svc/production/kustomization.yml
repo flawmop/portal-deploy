@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/flawmop/simulation-svc/k8s?ref=d4cfdc15082e0f4dcb759bf366224c86fda50245
+- github.com/flawmop/submission-svc/k8s?ref=d4cfdc15082e0f4dcb759bf366224c86fda50245
 
 patches:
 - path: ./patch-env.yml
@@ -14,10 +14,10 @@ configMapGenerator:
   name: simulation-config
 
 images:
-- name: simulation-svc
-  newName: ghcr.io/flawmop/simulation-svc
+- name: submission-svc
+  newName: ghcr.io/flawmop/submission-svc
   newTag: d4cfdc15082e0f4dcb759bf366224c86fda50245
 
 replicas:
 - count: 1
-  name: simulation-svc
+  name: submission-svc
