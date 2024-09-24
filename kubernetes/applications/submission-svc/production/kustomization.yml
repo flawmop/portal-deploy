@@ -11,7 +11,7 @@ configMapGenerator:
 - behavior: merge
   files:
   - application.yml
-  name: simulation-config
+  name: submission-config
 
 images:
 - name: submission-svc
