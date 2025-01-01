@@ -22,3 +22,5 @@ spec:
                 secretKeyRef:
                   name: rabbitmq-secret
                   key: rabbitmquser
+            - name: URL_APP_MANAGER
+              value: http://app-manager:8080/
