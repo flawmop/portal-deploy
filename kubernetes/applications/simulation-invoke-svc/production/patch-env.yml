@@ -23,4 +23,4 @@ spec:
                   name: rabbitmq-secret
                   key: rabbitmquser
             - name: URL_APP_MANAGER
-              value: http://keda-add-ons-http-interceptor-proxy/
+              value: http://keda-add-ons-http-interceptor-proxy:8080/
