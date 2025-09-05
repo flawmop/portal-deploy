@@ -1,0 +1,23 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+- github.com/flawmop/results-svc/k8s?ref=13ff32858aedee925ae8ba7364f3f2bba1f95530
+
+patches:
+- path: ./patch-env.yml
+
+configMapGenerator:
+- behavior: merge
+  files:
+  - application.yml
+  name: results-config
+
+images:
+- name: results-svc
+  newName: ghcr.io/flawmop/results-svc
+  newTag: 13ff32858aedee925ae8ba7364f3f2bba1f95530
+
+replicas:
+- count: 1
+  name: results-svc
