@@ -7,3 +7,6 @@ spec:
     spec:
       containers:
         - name: results-svc
+          env:
+            - name: JAVA_TOOL_OPTIONS
+              value: -Dlogging.level.root=DEBUG
