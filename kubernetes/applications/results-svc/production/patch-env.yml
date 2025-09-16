@@ -10,3 +10,5 @@ spec:
           env:
             - name: JAVA_TOOL_OPTIONS
               value: -Dlogging.level.root=DEBUG
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://portal-postgres:5432/portaldb
