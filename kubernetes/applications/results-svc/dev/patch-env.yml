@@ -9,4 +9,18 @@ spec:
         - name: results-svc
           env:
             - name: JAVA_TOOL_OPTIONS
-              value: "-Dlogging.level.root=DEBUG"
+              value: -Dlogging.level.root=DEBUG
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:postgresql://portal-postgres:5432/portaldb
+            - name: SPRING_RABBITMQ_HOST
+              value: portal-rabbitmq
+            - name: SPRING_RABBITMQ_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-secret
+                  key: rabbitmqpassword
+            - name: SPRING_RABBITMQ_USER
+              valueFrom:
+                secretKeyRef:
+                  name: rabbitmq-secret
+                  key: rabbitmquser
