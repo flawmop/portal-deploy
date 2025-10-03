@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/flawmop/submission-svc/k8s?ref=ff8a1044bad777a1c453f5eb98ab6ff937b8554a
+- github.com/flawmop/submission-svc/k8s?ref=45ba609c2c6895b02789ae88f4e0d4a206e9cc7f
 
 patches:
 - path: ./patch-env.yml
@@ -16,7 +16,7 @@ configMapGenerator:
 images:
 - name: submission-svc
   newName: ghcr.io/flawmop/submission-svc
-  newTag: ff8a1044bad777a1c453f5eb98ab6ff937b8554a
+  newTag: 45ba609c2c6895b02789ae88f4e0d4a206e9cc7f
 
 replicas:
 - count: 1
