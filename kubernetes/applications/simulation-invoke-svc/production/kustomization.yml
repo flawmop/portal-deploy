@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/flawmop/simulation-invoke-svc/k8s?ref=a668c55a8538e41efb4fcba7b1d22c0e3206de1f
+- github.com/flawmop/simulation-invoke-svc/k8s?ref=421990cde175e0670f8adf6d2374a032d99e77d8
 
 patches:
 - path: ./patch-env.yml
@@ -16,7 +16,7 @@ configMapGenerator:
 images:
 - name: simulation-invoke-svc
   newName: ghcr.io/flawmop/simulation-invoke-svc
-  newTag: a668c55a8538e41efb4fcba7b1d22c0e3206de1f
+  newTag: 421990cde175e0670f8adf6d2374a032d99e77d8
 
 replicas:
 - count: 1
