@@ -1,0 +1,22 @@
+com:
+  insilicosoft:
+    executor:
+      core-pool-size: 10
+      max-pool-size: 10
+      queue-capacity: 500
+      thread-name-prefix: ~simsvc-prod-
+
+logging:
+  level:
+    root: TRACE
+
+spring:
+  datasource:
+    url: jdbc:postgresql://portal-postgres:5432/portaldb
+  rabbitmq:
+    host: portal-rabbitmq
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak.production.insilicosoft.com/realms/Portal

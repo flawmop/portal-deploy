@@ -9,20 +9,6 @@ spec:
       containers:
       - name: submission-svc
         env:
-        - name: COM_INSILICOSOFT_EXECUTOR_COREPOOLSIZE
-          value: '10'
-        - name: COM_INSILICOSOFT_EXECUTOR_MAXPOOLSIZE
-          value: '10'
-        - name: COM_INSILICOSOFT_EXECUTOR_QUEUECAPACITY
-          value: '500'
-        - name: COM_INSILICOSOFT_EXECUTOR_THREADNAMEPREFIX
-          value: ~simsvc-prod-
-        - name: LOGGING_LEVEL_ROOT
-          value: TRACE
-        - name: SPRING_DATASOURCE_URL
-          value: jdbc:postgresql://portal-postgres:5432/portaldb
-        - name: SPRING_RABBITMQ_HOST
-          value: portal-rabbitmq
         - name: SPRING_RABBITMQ_PASSWORD
           valueFrom:
             secretKeyRef:
@@ -33,5 +19,3 @@ spec:
             secretKeyRef:
               name: rabbitmq-secret
               key: rabbitmquser
-        - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI
-          value: http://keycloak.production.insilicosoft.com/realms/Portal
