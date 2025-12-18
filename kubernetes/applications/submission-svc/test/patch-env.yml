@@ -15,7 +15,7 @@ spec:
         - name: COM_INSILICOSOFT_EXECUTOR_QUEUECAPACITY
           value: '250'
         - name: COM_INSILICOSOFT_EXECUTOR_THREADNAMEPREFIX
-          value: ~simsvc-dev-
+          value: ~simsvc-test-
         - name: SPRING_RABBITMQ_HOST
           value: portal-rabbitmq
         - name: SPRING_RABBITMQ_PASSWORD
@@ -29,4 +29,4 @@ spec:
               name: rabbitmq-secret
               key: rabbitmquser
         - name: SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI
-          value: http://keycloak.dev.insilicosoft.com/realms/Portal
+          value: http://keycloak.test.insilicosoft.com/realms/Portal
