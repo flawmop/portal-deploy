@@ -25,5 +25,5 @@ jobs:
       - name: Commit updated manifests
         uses: stefanzweifel/git-auto-commit-action@v5.0.0
         with:
-          commit_message: "Update ${{ env.APP_NAME }} to version ${{ env.APP_VERSION }}"
+          commit_message: "Update ${{ env.APP_NAME }} to version ${{ env.APP_VERSION }} on production"
           branch: main
